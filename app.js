@@ -1,4 +1,4 @@
-//加载express模块
+﻿//加载express模块
 var express = require('express');
 //加载模板处理模块
 var swig = require('swig');
@@ -63,11 +63,11 @@ app.use('/api', require('./routers/api'));
 app.use('/', require('./routers/main'));
 
 //监听http请求
-mongoose.connect('mongodb://localhost:27017/blog', function(err) {
+mongoose.connect('mongodb://101.200.39.81:27017:27017/blog', function(err) {
     if (err) {
         console.log('数据库连接失败');
     } else {
         console.log('数据库连接成功');
-        app.listen(8081);
+        app.listen(80);
     }
 });
